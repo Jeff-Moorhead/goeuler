@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 
-func fibonacci(max int) []int {
+func Fibonacci(max int) []int {
     var fibs []int
     start, end := 1, 2
     for start <= max {
@@ -14,8 +14,8 @@ func fibonacci(max int) []int {
 }
 
 
-func evenfibsum(max int) int {
-    fibs := fibonacci(max)
+func Evenfibsum(max int) int {
+    fibs := Fibonacci(max)
     sum := 0
     for _, f := range fibs {
         if f % 2 == 0 {
@@ -27,7 +27,7 @@ func evenfibsum(max int) int {
 
 
 func main() {
-    sum := evenfibsum(4000000)
+    sum := Evenfibsum(4000000)
     fmt.Println(sum)
 }
 
